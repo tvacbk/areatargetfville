@@ -17,11 +17,11 @@
 			"generator": "Object3D.toJSON"
 		},
 		"object": {
-			"uuid": "8eb23553-0ae4-4f62-b27c-5b08a06b88ba",
+			"uuid": "202e073c-1bba-4d3c-979f-e1abd1f10b7f",
 			"type": "PerspectiveCamera",
 			"name": "Camera",
 			"layers": 1,
-			"matrix": [0.9284262798919981,0,0.3715166790413384,0,0.1146703516069036,0.9511741718835739,-0.28656309114040845,0,-0.3533770695280807,0.3086546528753406,0.8830950979312189,0,-6.536695792194362,5.709429797994082,16.335310093729102,1],
+			"matrix": [0.987800942856699,-6.9388939039072276e-18,-0.15572185874634417,0,-0.07203052374891851,0.8865885805679897,-0.4569160671883769,0,0.13806122170933033,0.4625588490197079,0.8757730358110428,0,2.553827864999256,8.556317720522392,16.199868106180045,1],
 			"up": [0,1,0],
 			"fov": 50,
 			"zoom": 1,
@@ -68,6 +68,24 @@
 				"phiLength": 6.283185307179586,
 				"thetaStart": 0,
 				"thetaLength": 3.141592653589793
+			},
+			{
+				"uuid": "29afc436-0269-4f1d-b8f6-8f57cf6c802d",
+				"type": "PlaneGeometry",
+				"width": 1,
+				"height": 1,
+				"widthSegments": 1,
+				"heightSegments": 1
+			},
+			{
+				"uuid": "374d252d-9d64-4d4d-8da1-2de7df55b845",
+				"type": "TorusKnotGeometry",
+				"radius": 1,
+				"tube": 0.4,
+				"tubularSegments": 64,
+				"radialSegments": 8,
+				"p": 2,
+				"q": 3
 			}],
 		"materials": [
 			{
@@ -132,6 +150,48 @@
 				"stencilFail": 7680,
 				"stencilZFail": 7680,
 				"stencilZPass": 7680
+			},
+			{
+				"uuid": "7ed7c7c5-a73b-4d3c-9076-01d1301f0675",
+				"type": "MeshStandardMaterial",
+				"color": 16711422,
+				"roughness": 1,
+				"metalness": 0,
+				"emissive": 0,
+				"envMapIntensity": 1,
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"colorWrite": true,
+				"stencilWrite": false,
+				"stencilWriteMask": 255,
+				"stencilFunc": 519,
+				"stencilRef": 0,
+				"stencilFuncMask": 255,
+				"stencilFail": 7680,
+				"stencilZFail": 7680,
+				"stencilZPass": 7680
+			},
+			{
+				"uuid": "5670e289-937c-4f86-9e85-e780da82f76b",
+				"type": "MeshStandardMaterial",
+				"color": 16711422,
+				"roughness": 1,
+				"metalness": 0,
+				"emissive": 0,
+				"envMapIntensity": 1,
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"colorWrite": true,
+				"stencilWrite": false,
+				"stencilWriteMask": 255,
+				"stencilFunc": 519,
+				"stencilRef": 0,
+				"stencilFuncMask": 255,
+				"stencilFail": 7680,
+				"stencilZFail": 7680,
+				"stencilZPass": 7680
 			}],
 		"object": {
 			"uuid": "7e1bce8a-4e6f-4f4e-9e32-798beacbd230",
@@ -170,12 +230,31 @@
 					"up": [0,1,0],
 					"geometry": "67836a7f-85c8-4967-afdf-dbc018cbf62b",
 					"material": "842272a9-dedd-4e6d-b9f3-75385f988e65"
+				},
+				{
+					"uuid": "5925c708-b4f8-4f27-ad89-3e982287a72e",
+					"type": "Mesh",
+					"name": "Plane",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-0.014601531269560403,1.180118702596537,-1.9016207799147713,1],
+					"up": [0,1,0],
+					"geometry": "29afc436-0269-4f1d-b8f6-8f57cf6c802d",
+					"material": "7ed7c7c5-a73b-4d3c-9076-01d1301f0675"
+				},
+				{
+					"uuid": "b8219937-e6d4-432f-8b89-54dd0c86a9f4",
+					"type": "Mesh",
+					"name": "TorusKnot",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1.8745257099810875,-2.850007102125199,1.3802647116749935,1],
+					"up": [0,1,0],
+					"geometry": "374d252d-9d64-4d4d-8da1-2de7df55b845",
+					"material": "5670e289-937c-4f86-9e85-e780da82f76b"
 				}],
 			"fog": {
-				"type": "Fog",
+				"type": "FogExp2",
 				"color": 11184810,
-				"near": 0.1,
-				"far": 50
+				"density": 0.05
 			}
 		}
 	},
